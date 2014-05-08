@@ -1,6 +1,6 @@
 // Format all posts as markdown.
 $(function() {
-  $('.pst > .ccl:nth-child(2), body[class^=post] > .frm > .ccl').each(function() {
+  $('.pst, .msg, body[class$=_add] > .frm, body[class$=_edit] > .frm').find('.ccl:nth-child(2)').each(function() {
 	var el, text;
 
 	el = $(this);
