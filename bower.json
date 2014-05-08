@@ -1,0 +1,11 @@
+{
+  "name": "mwf-marked",
+  "version": "0.0.0",
+  "authors": [
+    "Luchs <Luchs@euirc.eu>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "marked": "~0.3.2"
+  }
+}
