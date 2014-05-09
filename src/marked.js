@@ -1,5 +1,21 @@
 // Format all posts as markdown.
 $(function() {
+  // Setup marked.
+  var renderer = new marked.Renderer();
+
+  // Use <b> and <i> to match the standard mwf tags.
+  renderer.strong = function(text) {
+    return '<b>' + text + '</b>';
+  };
+
+  renderer.em = function(text) {
+    return '<i>' + text + '</i>';
+  };
+
+  marked.setOptions({
+    renderer: renderer,
+  });
+
   $('.pst, .msg, body[class$=_add] > .frm, body[class$=_edit] > .frm').find('.ccl:nth-child(2)').each(function() {
 	var el, text;
 
