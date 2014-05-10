@@ -20,6 +20,7 @@ $(function() {
 
   marked.setOptions({
     renderer: renderer,
+    breaks: true,
   });
 
   $('.pst, .msg, body[class$=_add] > .frm, body[class$=_edit] > .frm').find('.ccl:nth-child(2)').each(function() {
