@@ -36,5 +36,6 @@ $(function() {
     text = text.replace(/<\/p><\/blockquote>/g, '\n');
 
     el.html(marked(text));
+    el.find('.ava').unwrap();
   });
 });
