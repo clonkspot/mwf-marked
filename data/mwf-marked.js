@@ -1284,6 +1284,12 @@ $(function() {
     return marked.Renderer.prototype.link.call(this, href, title, text);
   };
 
+  // Fix double escaping in code blocks.
+  renderer.code = function() {
+	var result = marked.Renderer.prototype.code.apply(this, arguments);
+	return result.replace(/&amp;/g, '&');
+  };
+
   marked.setOptions({
     renderer: renderer,
     breaks: true,
