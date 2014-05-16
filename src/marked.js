@@ -24,6 +24,12 @@ $(function() {
 	return result.replace(/&amp;/g, '&');
   };
 
+  // Same for inline code.
+  renderer.codespan = function(text) {
+	text = text.replace(/&amp;/g, '&');
+	return marked.Renderer.prototype.codespan.call(this, text);
+  };
+
   marked.setOptions({
     renderer: renderer,
     breaks: true,
