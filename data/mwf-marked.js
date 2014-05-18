@@ -1310,7 +1310,7 @@ $(function() {
     // Replace mwforum's <br>s with newlines so that paragraph detection works.
     text = text.replace(/<br>/g, '\n');
     // Remove blockquotes as they confuse marked.
-    text = text.replace(/<blockquote><p>/g, '>');
+    text = text.replace(/<blockquote><p>/g, '\n>');
     text = text.replace(/<\/p><\/blockquote>/g, '\n');
     // Remove the newline after the avatar as it shows up in the output.
     text = text.replace(/(<img class="ava" [^>]+>)\n/, '$1');
