@@ -1312,10 +1312,11 @@ $(function() {
     // Remove blockquotes as they confuse marked.
     text = text.replace(/<blockquote><p>/g, '\n>');
     text = text.replace(/<\/p><\/blockquote>/g, '\n');
-    // Remove the newline after the avatar as it shows up in the output.
-    text = text.replace(/(<img class="ava" [^>]+>)\n/, '$1');
+    // Add a newline after the avatar to make sure to start with a paragraph.
+    text = text.replace(/(<img class="ava" [^>]+>)/, "$&\n")
 
     el.html(marked(text));
     el.find('.ava').unwrap();
+    el.children(':not(.ava):first').css('margin-top', 0);
   });
 });
