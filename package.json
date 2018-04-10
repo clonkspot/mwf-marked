@@ -1,0 +1,24 @@
+{
+  "name": "mwf-marked",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clonkspot/mwf-marked.git"
+  },
+  "author": "Lukas Werling <lukas.werling@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clonkspot/mwf-marked/issues"
+  },
+  "homepage": "https://github.com/clonkspot/mwf-marked#readme",
+  "devDependencies": {
+    "uglify-js": "^3.3.20"
+  },
+  "dependencies": {
+    "marked": "^0.3.19"
+  }
+}
